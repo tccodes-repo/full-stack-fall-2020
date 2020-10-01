@@ -35,9 +35,22 @@ jobs:
       working-directory: ./api
             
     - name: Run Unit Tests
-      working-directory: ./api
+      working-directory: ./api/Emailer.Tests
       run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov
-      
+
+    - name: Docker Compose Up
+      run: |
+        docker-compose up -d
+        sleep 15s
+        
+    - name: Run Integration Tests
+      working-directory: ./api/Emailer.Integration.Tests
+      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov
+
+    - name: Docker Compose Down
+      if: always()
+      run: docker-compose down
+        
     - name: Submit Code Coverage
       run: bash <(curl -s https://codecov.io/bash)
       env:
