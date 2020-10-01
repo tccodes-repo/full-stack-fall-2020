@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emailer", "Emailer\Emailer.csproj", "{350BDF2F-AB6E-491A-85B1-4FD5FE922DAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emailer.Tests", "Emailer.Tests\Emailer.Tests.csproj", "{505A4F7B-6218-4D37-95F5-61BC09405F62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{350BDF2F-AB6E-491A-85B1-4FD5FE922DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{350BDF2F-AB6E-491A-85B1-4FD5FE922DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{350BDF2F-AB6E-491A-85B1-4FD5FE922DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{350BDF2F-AB6E-491A-85B1-4FD5FE922DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{505A4F7B-6218-4D37-95F5-61BC09405F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505A4F7B-6218-4D37-95F5-61BC09405F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505A4F7B-6218-4D37-95F5-61BC09405F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505A4F7B-6218-4D37-95F5-61BC09405F62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
