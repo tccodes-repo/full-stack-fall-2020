@@ -1,0 +1,105 @@
+SF:/Users/derek/Projects/tccodes-repo/full-stack-fall-2020/api/Emailer/Program.cs
+FN:14,System.Void Emailer.Program::Main(System.String[])
+FNDA:0,System.Void Emailer.Program::Main(System.String[])
+DA:15,0
+DA:16,0
+DA:17,0
+FN:19,Microsoft.Extensions.Hosting.IHostBuilder Emailer.Program::CreateHostBuilder(System.String[])
+FNDA:0,Microsoft.Extensions.Hosting.IHostBuilder Emailer.Program::CreateHostBuilder(System.String[])
+DA:20,0
+DA:21,0
+LF:5
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/Users/derek/Projects/tccodes-repo/full-stack-fall-2020/api/Emailer/Startup.cs
+FN:22,Microsoft.Extensions.Configuration.IConfiguration Emailer.Startup::get_Configuration()
+FNDA:0,Microsoft.Extensions.Configuration.IConfiguration Emailer.Startup::get_Configuration()
+DA:23,0
+FN:26,System.Void Emailer.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+FNDA:0,System.Void Emailer.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+DA:27,0
+DA:28,0
+DA:29,0
+FN:32,System.Void Emailer.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
+FNDA:0,System.Void Emailer.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:39,0
+DA:41,0
+DA:43,0
+DA:45,0
+DA:46,0
+BRDA:34,9,0,0
+BRDA:34,9,1,0
+FN:17,System.Void Emailer.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)
+FNDA:0,System.Void Emailer.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+LF:18
+LH:0
+BRF:2
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/Users/derek/Projects/tccodes-repo/full-stack-fall-2020/api/Emailer/WeatherForecast.cs
+FN:6,System.DateTime Emailer.WeatherForecast::get_Date()
+FNDA:0,System.DateTime Emailer.WeatherForecast::get_Date()
+DA:7,0
+FN:8,System.Int32 Emailer.WeatherForecast::get_TemperatureC()
+FNDA:0,System.Int32 Emailer.WeatherForecast::get_TemperatureC()
+DA:9,0
+FN:10,System.Int32 Emailer.WeatherForecast::get_TemperatureF()
+FNDA:0,System.Int32 Emailer.WeatherForecast::get_TemperatureF()
+DA:11,0
+FN:12,System.String Emailer.WeatherForecast::get_Summary()
+FNDA:3,System.String Emailer.WeatherForecast::get_Summary()
+DA:13,3
+LF:4
+LH:1
+BRF:0
+BRH:0
+FNF:4
+FNH:1
+end_of_record
+SF:/Users/derek/Projects/tccodes-repo/full-stack-fall-2020/api/Emailer/Controllers/WeatherForecastController.cs
+FN:27,System.Collections.Generic.IEnumerable`1<Emailer.WeatherForecast> Emailer.Controllers.WeatherForecastController::Get()
+FNDA:0,System.Collections.Generic.IEnumerable`1<Emailer.WeatherForecast> Emailer.Controllers.WeatherForecastController::Get()
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+FN:20,System.Void Emailer.Controllers.WeatherForecastController::.ctor(Microsoft.Extensions.Logging.ILogger`1<Emailer.Controllers.WeatherForecastController>)
+FNDA:0,System.Void Emailer.Controllers.WeatherForecastController::.ctor(Microsoft.Extensions.Logging.ILogger`1<Emailer.Controllers.WeatherForecastController>)
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+FN:13,System.Void Emailer.Controllers.WeatherForecastController::.cctor()
+FNDA:0,System.Void Emailer.Controllers.WeatherForecastController::.cctor()
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+LF:18
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
