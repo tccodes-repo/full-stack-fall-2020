@@ -19,3 +19,32 @@ jobs:
         node-version: 10.2
     - run: npm build
       working-directory: ./ui
+      
+      
+  build-api:
+    
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.300
+        
+    - run: dotnet restore
+      name: Restore Packages
+      working-directory: ./api
+            
+    - name: Run Unit Tests
+      working-directory: ./api
+      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov
+      
+    - name: Submit Code Coverage
+      run: curl -s https://codecov.io/bash
+      env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          
+    - name: Run Build
+      run: dotnet build
+      working-directory: ./api
+      
+      
