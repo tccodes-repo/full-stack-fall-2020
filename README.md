@@ -15,7 +15,7 @@ Setting up your working environment.
 
 1.You should create a fork in GitHub [https://github.com/tccodes-repo/full-stack-fall-2020]
 
-2.<code>git clone https://github.com/tccodes-repo/full-stack-fall-2020.gitclone</code>the repo to your local machine.
+2.<code>git clone 'your forked version of the repo'</code>the repo to your local machine.
 
 3.<code>cd full-stack-fall-2020</code>
 
