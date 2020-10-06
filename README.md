@@ -15,30 +15,30 @@ Setting up your working environment.
 
 1.You should create a fork in GitHub [https://github.com/tccodes-repo/full-stack-fall-2020]
 
-2. <code>git clone https://github.com/tccodes-repo/full-stack-fall-2020.gitclone</code>the repo to your local machine.
+2.<code>git clone https://github.com/tccodes-repo/full-stack-fall-2020.gitclone</code>the repo to your local machine.
 
-3. 'cd full-stack-fall-2020'
+3.<code>cd full-stack-fall-2020</code>
 
-4.cd api
+4.<code>cd api</code>
 
-5.cd Emailer
+5.<code>cd Emailer</code>
 
-6.dotnet build
+6.<code>dotnet build</code>
 
-7.dotnet run ( I had to run this a couple of times as the my machine did not connect right away.)
+7.<code>dotnet run</code> ( I had to run this a couple of times as the my machine did not connect right away.)
 
 8.At this point you should be able to open a browser window at
 [https://localhost:5001/weatherforecast] and see the the "WeatherForecast.cs" project. (I had a security warning the first time I attempted at running this project locally, adjust you settings accordingly)
 
 9.control c
 
-10.cd ../..
+10.<code>cd ../..</code>
 
-11.cd ui
+11.<code>cd ui</code>
 
 12.At this point you should be in the ui folder at this point
 
-13.npm install
+13.<code>npm install</code>
 
-14.npm start -- you browser may automatically go to
+14.<code>npm start</code> -- you browser may automatically go to
 [http://localhost:3000/] and you should see the React logo with the Learn React link at the bottom. If not, please feel free to start up the React portion of the app at the listed location
