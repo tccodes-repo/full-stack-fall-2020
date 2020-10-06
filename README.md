@@ -6,12 +6,8 @@
 The following directions assume you have already downloaded the
 .net Core SDK [https://dotnet.microsoft.com/download]
 
-Setting up your development environment:
-
-Getting the App Running
+Getting the App Running:
 (on a Mac)
-
-Setting up your working environment.
 
 1.You should create a fork in GitHub [https://github.com/tccodes-repo/full-stack-fall-2020]
 
@@ -25,10 +21,10 @@ Setting up your working environment.
 
 6.<code>dotnet build</code>
 
-7.<code>dotnet run</code> ( I had to run this a couple of times as my machine did not connect right away.)
+7.<code>dotnet run</code>
 
 8.At this point you should be able to open a browser window at
-[https://localhost:5001/weatherforecast] and see the the "WeatherForecast.cs" project. (I had a security warning the first time I attempted running this project locally, adjust you settings accordingly)
+[https://localhost:5001/weatherforecast] and see the the "WeatherForecast.cs" project. I had to run this a couple of times as my machine did not connect right away.I also had a security warning the first time I attempted running this project locally, adjust you settings accordingly.
 
 9.control c
 
