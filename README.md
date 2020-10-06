@@ -15,7 +15,7 @@ Setting up your working environment.
 
 1.You should create a fork in GitHub [https://github.com/tccodes-repo/full-stack-fall-2020]
 
-2.<code>git clone 'your forked version of the repo'</code>the repo to your local machine.
+2.<code>git clone 'your forked version of /full-stack-fall-2020.repo'</code>the repo to your local machine.
 
 3.<code>cd full-stack-fall-2020</code>
 
@@ -25,10 +25,10 @@ Setting up your working environment.
 
 6.<code>dotnet build</code>
 
-7.<code>dotnet run</code> ( I had to run this a couple of times as the my machine did not connect right away.)
+7.<code>dotnet run</code> ( I had to run this a couple of times as my machine did not connect right away.)
 
 8.At this point you should be able to open a browser window at
-[https://localhost:5001/weatherforecast] and see the the "WeatherForecast.cs" project. (I had a security warning the first time I attempted at running this project locally, adjust you settings accordingly)
+[https://localhost:5001/weatherforecast] and see the the "WeatherForecast.cs" project. (I had a security warning the first time I attempted running this project locally, adjust you settings accordingly)
 
 9.control c
 
@@ -36,7 +36,7 @@ Setting up your working environment.
 
 11.<code>cd ui</code>
 
-12.At this point you should be in the ui folder at this point
+12.At this point you should be in the ui folder
 
 13.<code>npm install</code>
 
