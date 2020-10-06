@@ -21,22 +21,24 @@ Setting up your working environment
 
 4.cd api
 
-5.dotnet build
-
 5.cd Emailer
 
-6.dotnet run
+6.dotnet build
 
-7.At this point you should be able to open a browser window at 
-[https://localhost:5001/weatherforecast] and see the the "weatherforecast" project. (I had a security warning the first time I attempted to run this project locally, adjust you setting accordingly)
+7.dotnet run ( I had to run this a couple of times as the it did not connect right away.)
 
-8. cd ../.. 
+8.At this point you should be able to open a browser window at
+[https://localhost:5001/weatherforecast] and see the the "weatherforecast" project. (I had a security warning the first time I attempted to run this project locally, adjust you settings accordingly)
 
-9. you should be in the ui folder at this point
+9.control c
 
-10. npm install
+10.cd ../..
 
-11. npm start -- you browser may automatically but if not go to 
-http://localhost:3000/ and you should see the React logo with the Learn React link at the bottom
+11.cd ui
 
+12.At this point you should be in the ui folder at this point
 
+13.npm install
+
+14.npm start -- you browser may automatically go to
+[http://localhost:3000/] and you should see the React logo with the Learn React link at the bottom. If not, please feel free to start up the React portion of the app at the listed location
