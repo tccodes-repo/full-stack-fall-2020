@@ -5,9 +5,21 @@ services:
     image: mongo:4.2
     ports:
       - "27017:27017"
+    volumes:
+      # If you use this method you don't need the 'volumes' at the bottom of this file.
+      # It will store the data on your machine in the directory you use.
+      # WARNING: Docker for Windows runs inside of a Hyper-V virtual machine, in order 
+      #          to get the data on your Windows disk you may need to use a path that maps from 
+      #          the VM to your host (i.e. /mnt/c/Users/<me>/Desktop).
+      # - /tmp/mongodb:/data/db
+      - mongodb:/data/db
     
   smtp:
     image: mailhog/mailhog
     ports:
       - "1025:1025"
       - "8025:8025"
+        
+        
+volumes:
+  mongodb:
