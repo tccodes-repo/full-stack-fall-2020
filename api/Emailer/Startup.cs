@@ -32,16 +32,15 @@ namespace Emailer
 
             services.Configure<MongoSettings>(Configuration.GetSection("MongoDb"));
 
-            var mongoSettings = Configuration.GetValue<MongoSettings>("MongoDb");
-            var mongoClient = new MongoClient("mongodb://localhost:27017");
-
-            services.AddScoped<IMongoDatabase>(svc =>
+            var mongoSettings = new MongoSettings
             {
-                var settings = svc.GetService<IOptions<MongoSettings>>();
-                return mongoClient.GetDatabase("emailer");
+                ConnectionString = Configuration.GetValue<string>("MongoDb:ConnectionString")
+            };
+            var mongoClient = new MongoClient(mongoSettings.ConnectionString);
 
-            });
-
+            services.AddScoped<IMongoDatabase>(svc => mongoClient.GetDatabase("emailer"));
+            
+            services.AddScoped(typeof(IRepository<>), typeof(MongoRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
