@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using Emailer.MongoDb;
 using Microsoft.AspNetCore.Builder;
@@ -41,6 +42,11 @@ namespace Emailer
             services.AddScoped<IMongoDatabase>(svc => mongoClient.GetDatabase("emailer"));
             
             services.AddScoped(typeof(IRepository<>), typeof(MongoRepository<>));
+
+            services.AddTransient<SmtpClient>(svc =>
+            {
+                return new SmtpClient("localhost", 1025);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
