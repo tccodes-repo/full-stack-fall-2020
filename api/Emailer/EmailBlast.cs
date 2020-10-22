@@ -1,3 +1,4 @@
+using System;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
@@ -10,5 +11,11 @@ namespace Emailer
         public string? Template { get; set; }
 
         public string Status { get; set; } = "Pending";
+
+        public int EmailsDelivered { get; set; } = 0;
+        
+        public DateTime CreatedOn { get; set; } = DateTime.Now;
+        
+        public DateTime StatusChangedOn { get; set; } = DateTime.Now;
     }
 }

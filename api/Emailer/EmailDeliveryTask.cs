@@ -43,6 +43,8 @@ namespace Emailer
                 var pendingBlasts = await _emailBlastRepository.GetPendingEmailBlastsAsync(cancellationToken);
                 foreach (var blast in pendingBlasts)
                 {
+                    _logger.LogInformation($"Processing email blast with id {blast.Id}");
+                    
                     if (blast.Template == null)
                     {
                         _logger.LogWarning($"Could not send blast with id {blast.Id}: template id was null");
@@ -61,7 +63,8 @@ namespace Emailer
                         if (template == null)
                         {
                             _logger.LogWarning(
-                                $"Could not send blast with id {blast.Id}: template with id {blast.Template} not found");
+                                $"Could not send blast with id {blast.Id}: template with " +
+                                $"id {blast.Template} not found");
                             await MarkBlastAsErrored(blast, cancellationToken); 
                             continue;
                         }
@@ -69,22 +72,25 @@ namespace Emailer
                         var customer = await _customerRepository.GetByIdAsync(blast.Customer, cancellationToken);
                         if (customer == null)
                         {
-                            _logger.LogWarning($"Could not send email blast with id {blast.Id}: customer not found");
+                            _logger.LogWarning($"Could not send email blast with id {blast.Id}: " +
+                                               $"customer not found");
                             await MarkBlastAsErrored(blast, cancellationToken);
                             continue;
                         }
+                        
+                        _logger.LogInformation($"Delivering email blast with template '{template.Name}' " +
+                                               $"for customer '{customer.FirstName} {customer.LastName}'");
 
                         var recipients =
                             await _recipientRepository.GetRecipientsForCustomer(blast.Customer, cancellationToken);
 
                         await ProcessBlast(template, customer, recipients, cancellationToken);
-
-                        blast.Status = "Delivered";
-                        await _emailBlastRepository.UpdateAsync(blast, cancellationToken);
+                        await MarkBlastAsDelivered(blast, recipients.Count, cancellationToken);
                     }
                     catch (Exception ex)
                     {
                         _logger.LogError(ex, $"Could not send email blast for blast {blast.Id}");
+                        await MarkBlastAsErrored(blast, cancellationToken);
                     }
                 }
             }
@@ -93,12 +99,15 @@ namespace Emailer
         private async Task MarkBlastAsErrored(EmailBlast blast, CancellationToken cancellationToken)
         {
             blast.Status = "Error";
+            blast.StatusChangedOn = DateTime.Now;
             await _emailBlastRepository.UpdateAsync(blast, cancellationToken);
         }
 
-        private async Task MarkBlastAsSuccess(EmailBlast blast, CancellationToken cancellationToken)
+        private async Task MarkBlastAsDelivered(EmailBlast blast, int sent, CancellationToken cancellationToken)
         {
-            blast.Status = "Success";
+            blast.Status = "Delivered";
+            blast.EmailsDelivered = sent;
+            blast.StatusChangedOn = DateTime.Now;
             await _emailBlastRepository.UpdateAsync(blast, cancellationToken);
         }
 

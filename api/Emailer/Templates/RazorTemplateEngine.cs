@@ -25,19 +25,21 @@ namespace Emailer.Templates
         public async Task<string> MergeTemplate(Template template, Customer customer, EmailRecipient recipient,
             CancellationToken cancellationToken = default)
         {
-            var cacheResult = _razorEngine.Handler.Cache.RetrieveTemplate(template.Id);
-            if (cacheResult.Success)
-            {
-                _logger.LogDebug($"Found cached template for id {template.Id}");
-                var cachedTemplate = cacheResult.Template.TemplatePageFactory();
-                return await _razorEngine.RenderTemplateAsync(cachedTemplate, recipient);
-            }
-
+            
             var model = new
             {
                 Customer = customer,
                 Recipient = recipient
             };
+            
+            var cacheResult = _razorEngine.Handler.Cache.RetrieveTemplate(template.Id);
+            if (cacheResult.Success)
+            {
+                _logger.LogDebug($"Found cached template for id {template.Id}");
+                var cachedTemplate = cacheResult.Template.TemplatePageFactory();
+                return await _razorEngine.RenderTemplateAsync(cachedTemplate, model);
+            }
+
 
             return await _razorEngine.CompileRenderStringAsync(template.Id, template.Body, model);
         }
