@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Mail;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
+using Emailer.SMTP;
 using Emailer.Templates;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
+
 
 namespace Emailer
 {
@@ -19,12 +19,12 @@ namespace Emailer
         private readonly IEmailRecipientRepository _recipientRepository;
         private readonly IRepository<Template> _templateRepository;
         private readonly IRepository<Customer> _customerRepository;
-        private readonly SmtpClient _smtpClient;
+        private readonly ISmtpClient _smtpClient;
         private readonly ILogger<EmailDeliveryTask> _logger;
         
         public EmailDeliveryTask(IEmailBlastRepository emailBlastRepository, ITemplateEngine templateEngine,
             IEmailRecipientRepository recipientRepository, IRepository<Template> templateRepository,
-            IRepository<Customer> customerRepository, SmtpClient smtpClient, 
+            IRepository<Customer> customerRepository, ISmtpClient smtpClient, 
             ILogger<EmailDeliveryTask>? logger = null)
         {
             _emailBlastRepository = emailBlastRepository;
