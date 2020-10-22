@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Threading.Tasks;
 using Emailer.MongoDb;
+using Emailer.Templates;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,24 +30,12 @@ namespace Emailer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-
-            services.Configure<MongoSettings>(Configuration.GetSection("MongoDb"));
-
-            var mongoSettings = new MongoSettings
-            {
-                ConnectionString = Configuration.GetValue<string>("MongoDb:ConnectionString")
-            };
-            var mongoClient = new MongoClient(mongoSettings.ConnectionString);
-
-            services.AddScoped<IMongoDatabase>(svc => mongoClient.GetDatabase("emailer"));
-            
-            services.AddScoped(typeof(IRepository<>), typeof(MongoRepository<>));
-
-            services.AddTransient<SmtpClient>(svc =>
-            {
-                return new SmtpClient("localhost", 1025);
-            });
+            services
+                .AddMongoDb(Configuration)
+                .AddTemplates()
+                .AddScoped<EmailDeliveryTask>()
+                .AddTransient(_ => new SmtpClient("localhost", 1025))
+                .AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
