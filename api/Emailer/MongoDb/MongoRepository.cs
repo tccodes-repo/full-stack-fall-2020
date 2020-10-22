@@ -4,36 +4,44 @@ using System.Threading;
 using System.Threading.Tasks;
 using MongoDB.Driver;
 
-namespace Emailer
+namespace Emailer.MongoDb
 {
     public class MongoRepository<T> : IRepository<T> where T : Model
     {
 
-        private readonly IMongoDatabase _database;
+        protected IMongoDatabase Database { get; }
 
         public MongoRepository(IMongoDatabase database)
         {
-            _database = database;
+            Database = database;
         }
 
-        private string GetCollectionName() => typeof(T).Name + "s";
+        protected string GetCollectionName() => typeof(T).Name + "s";
         
         public async Task<List<T>> GetAllAsync(CancellationToken cancellationToken = default)
         {
-            return await _database.GetCollection<T>(GetCollectionName())
+            return await Database.GetCollection<T>(GetCollectionName())
                 .Find(Builders<T>.Filter.Empty)
                 .ToListAsync(cancellationToken);
         }
 
+        public async Task<T?> GetByIdAsync(string id, CancellationToken cancellationToken = default)
+        {
+            return await Database.GetCollection<T>(GetCollectionName())
+                .Find(x => x.Id == id)
+                .FirstOrDefaultAsync(cancellationToken);
+        }
+        
+
         public async Task AddAsync(T item, CancellationToken cancellationToken = default)
         {
-            await _database.GetCollection<T>(GetCollectionName())
+            await Database.GetCollection<T>(GetCollectionName())
                 .InsertOneAsync(item, new InsertOneOptions(), cancellationToken);
         }
 
         public async Task UpdateAsync(T item, CancellationToken cancellationToken = default)
         {
-            await _database.GetCollection<T>(GetCollectionName())
+            await Database.GetCollection<T>(GetCollectionName())
                 .ReplaceOneAsync(
                 Builders<T>.Filter.Eq(x => x.Id, item.Id),
                 item, cancellationToken: cancellationToken);
@@ -41,8 +49,8 @@ namespace Emailer
 
         public async Task DeleteAsync(T item, CancellationToken cancellationToken = default)
         {
-            await _database.GetCollection<T>(GetCollectionName()).DeleteOneAsync(
-                Builders<T>.Filter.Eq(x => x.Id, item.Id));
+            await Database.GetCollection<T>(GetCollectionName()).DeleteOneAsync(
+                Builders<T>.Filter.Eq(x => x.Id, item.Id), cancellationToken);
         }
     }
 }
