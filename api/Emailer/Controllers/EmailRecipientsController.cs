@@ -19,27 +19,27 @@ namespace Emailer.Controllers
             _repository = repository;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "GetEmailRecipients")]
         public async Task<IEnumerable<EmailRecipient>> Get()
         {
             return await _repository.GetAllAsync();
         }
 
-        [HttpPost]
+        [HttpPost(Name = "AddEmailRecipient")]
         public async Task<EmailRecipient> Add([FromBody] EmailRecipient recipient)
         {
             await _repository.AddAsync(recipient);
             return recipient;
         }
 
-        [HttpPut]
+        [HttpPut(Name = "UpdateEmailRecipient")]
         public async Task<EmailRecipient> Update([FromBody] EmailRecipient customer)
         {
             await _repository.UpdateAsync(customer);
             return customer;
         }
 
-        [HttpDelete]
+        [HttpDelete(Name = "DeleteEmailRecipient")]
         public async Task Delete([FromBody] EmailRecipient customer)
         {
             await _repository.DeleteAsync(customer);

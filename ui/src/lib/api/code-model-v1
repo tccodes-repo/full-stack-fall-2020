@@ -1,0 +1,2422 @@
+{
+ "$id": "1",
+ "modelTypes": [
+  {
+   "$id": "2",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "3",
+     "isReadOnly": false,
+     "realPath": [
+      "id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "4",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "5",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "6",
+      "fixed": false,
+      "raw": "id"
+     },
+     "serializedName": "id",
+     "modelType": {
+      "$id": "7",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "8",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "9",
+     "isReadOnly": false,
+     "realPath": [
+      "firstName"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "10",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "11",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "12",
+      "fixed": false,
+      "raw": "firstName"
+     },
+     "serializedName": "firstName",
+     "modelType": {
+      "$id": "13",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "14",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "15",
+     "isReadOnly": false,
+     "realPath": [
+      "lastName"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "16",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "17",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "18",
+      "fixed": false,
+      "raw": "lastName"
+     },
+     "serializedName": "lastName",
+     "modelType": {
+      "$id": "19",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "20",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "21",
+     "isReadOnly": false,
+     "realPath": [
+      "email"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "22",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "23",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "24",
+      "fixed": false,
+      "raw": "email"
+     },
+     "serializedName": "email",
+     "modelType": {
+      "$id": "25",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "26",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Customer",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "27",
+    "fixed": false,
+    "raw": "Customer"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///117?oai3.shaken.json"
+     ],
+     "name": "Customer",
+     "originalLocations": [
+      "http://localhost:5000/swagger/v1/swagger.json#/components/schemas/Customer"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "28",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "29",
+     "isReadOnly": false,
+     "realPath": [
+      "id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "30",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "31",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "32",
+      "fixed": false,
+      "raw": "id"
+     },
+     "serializedName": "id",
+     "modelType": {
+      "$id": "33",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "34",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "35",
+     "isReadOnly": false,
+     "realPath": [
+      "customer"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "36",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "37",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "38",
+      "fixed": false,
+      "raw": "customer"
+     },
+     "serializedName": "customer",
+     "modelType": {
+      "$id": "39",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "40",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "41",
+     "isReadOnly": false,
+     "realPath": [
+      "template"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "42",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "43",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "44",
+      "fixed": false,
+      "raw": "template"
+     },
+     "serializedName": "template",
+     "modelType": {
+      "$id": "45",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "46",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "47",
+     "isReadOnly": false,
+     "realPath": [
+      "status"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "48",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "49",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "50",
+      "fixed": false,
+      "raw": "status"
+     },
+     "serializedName": "status",
+     "modelType": {
+      "$id": "51",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "52",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "53",
+     "isReadOnly": false,
+     "realPath": [
+      "emailsDelivered"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "54",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "55",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "56",
+      "fixed": false,
+      "raw": "emailsDelivered"
+     },
+     "serializedName": "emailsDelivered",
+     "modelType": {
+      "$id": "57",
+      "$type": "PrimaryType",
+      "format": "int32",
+      "knownPrimaryType": "int",
+      "name": {
+       "$id": "58",
+       "fixed": false,
+       "raw": "Int"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "59",
+     "isReadOnly": false,
+     "realPath": [
+      "createdOn"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "60",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "61",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "62",
+      "fixed": false,
+      "raw": "createdOn"
+     },
+     "serializedName": "createdOn",
+     "modelType": {
+      "$id": "63",
+      "$type": "PrimaryType",
+      "format": "date-time",
+      "knownPrimaryType": "dateTime",
+      "name": {
+       "$id": "64",
+       "fixed": false,
+       "raw": "DateTime"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "65",
+     "isReadOnly": false,
+     "realPath": [
+      "statusChangedOn"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "66",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "67",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "68",
+      "fixed": false,
+      "raw": "statusChangedOn"
+     },
+     "serializedName": "statusChangedOn",
+     "modelType": {
+      "$id": "69",
+      "$type": "PrimaryType",
+      "format": "date-time",
+      "knownPrimaryType": "dateTime",
+      "name": {
+       "$id": "70",
+       "fixed": false,
+       "raw": "DateTime"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "EmailBlast",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "71",
+    "fixed": false,
+    "raw": "EmailBlast"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///117?oai3.shaken.json"
+     ],
+     "name": "EmailBlast",
+     "originalLocations": [
+      "http://localhost:5000/swagger/v1/swagger.json#/components/schemas/EmailBlast"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "72",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "73",
+     "isReadOnly": false,
+     "realPath": [
+      "id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "74",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "75",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "76",
+      "fixed": false,
+      "raw": "id"
+     },
+     "serializedName": "id",
+     "modelType": {
+      "$id": "77",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "78",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "79",
+     "isReadOnly": false,
+     "realPath": [
+      "name"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "80",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "81",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "82",
+      "fixed": false,
+      "raw": "name"
+     },
+     "serializedName": "name",
+     "modelType": {
+      "$id": "83",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "84",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "85",
+     "isReadOnly": false,
+     "realPath": [
+      "email"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "86",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "87",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "88",
+      "fixed": false,
+      "raw": "email"
+     },
+     "serializedName": "email",
+     "modelType": {
+      "$id": "89",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "90",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "91",
+     "isReadOnly": false,
+     "realPath": [
+      "customer"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "92",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "93",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "94",
+      "fixed": false,
+      "raw": "customer"
+     },
+     "serializedName": "customer",
+     "modelType": {
+      "$id": "95",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "96",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "EmailRecipient",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "97",
+    "fixed": false,
+    "raw": "EmailRecipient"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///117?oai3.shaken.json"
+     ],
+     "name": "EmailRecipient",
+     "originalLocations": [
+      "http://localhost:5000/swagger/v1/swagger.json#/components/schemas/EmailRecipient"
+     ]
+    }
+   },
+   "deprecated": false
+  },
+  {
+   "$id": "98",
+   "$type": "CompositeType",
+   "properties": [
+    {
+     "$id": "99",
+     "isReadOnly": false,
+     "realPath": [
+      "id"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "100",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "101",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "102",
+      "fixed": false,
+      "raw": "id"
+     },
+     "serializedName": "id",
+     "modelType": {
+      "$id": "103",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "104",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "105",
+     "isReadOnly": false,
+     "realPath": [
+      "name"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "106",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "107",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "108",
+      "fixed": false,
+      "raw": "name"
+     },
+     "serializedName": "name",
+     "modelType": {
+      "$id": "109",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "110",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    },
+    {
+     "$id": "111",
+     "isReadOnly": false,
+     "realPath": [
+      "body"
+     ],
+     "collectionFormat": "none",
+     "defaultValue": {
+      "$id": "112",
+      "fixed": false
+     },
+     "deprecated": false,
+     "documentation": {
+      "$id": "113",
+      "fixed": false
+     },
+     "isRequired": false,
+     "isConstant": false,
+     "name": {
+      "$id": "114",
+      "fixed": false,
+      "raw": "body"
+     },
+     "serializedName": "body",
+     "modelType": {
+      "$id": "115",
+      "$type": "PrimaryType",
+      "knownPrimaryType": "string",
+      "name": {
+       "$id": "116",
+       "fixed": false,
+       "raw": "String"
+      },
+      "deprecated": false
+     }
+    }
+   ],
+   "serializedName": "Template",
+   "containsConstantProperties": false,
+   "name": {
+    "$id": "117",
+    "fixed": false,
+    "raw": "Template"
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///117?oai3.shaken.json"
+     ],
+     "name": "Template",
+     "originalLocations": [
+      "http://localhost:5000/swagger/v1/swagger.json#/components/schemas/Template"
+     ]
+    }
+   },
+   "deprecated": false
+  }
+ ],
+ "name": "Emailer",
+ "namespace": "",
+ "modelsName": "Models",
+ "apiVersion": "1.0",
+ "baseUrl": "http://localhost",
+ "properties": [
+  {
+   "$id": "118",
+   "isReadOnly": false,
+   "realPath": [
+    "id"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "119",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "120",
+    "fixed": false
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///117?oai3.shaken.json"
+     ],
+     "name": "paths·zsvso·emailblasts-id·delete·parameters·0",
+     "originalLocations": [
+      "http://localhost:5000/swagger/v1/swagger.json#/components/parameters/paths·zsvso·emailblasts-id·delete·parameters·0"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": true,
+   "isConstant": false,
+   "name": {
+    "$id": "121",
+    "fixed": false,
+    "raw": "id"
+   },
+   "serializedName": "id",
+   "modelType": {
+    "$id": "122",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "123",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  },
+  {
+   "$id": "124",
+   "isReadOnly": false,
+   "realPath": [
+    "id"
+   ],
+   "collectionFormat": "none",
+   "defaultValue": {
+    "$id": "125",
+    "fixed": false
+   },
+   "deprecated": false,
+   "documentation": {
+    "$id": "126",
+    "fixed": false
+   },
+   "extensions": {
+    "x-ms-metadata": {
+     "apiVersions": [
+      "1.0"
+     ],
+     "filename": [
+      "mem:///117?oai3.shaken.json"
+     ],
+     "name": "paths·15mg3ue·templates·delete·parameters·0",
+     "originalLocations": [
+      "http://localhost:5000/swagger/v1/swagger.json#/components/parameters/paths·15mg3ue·templates·delete·parameters·0"
+     ]
+    },
+    "x-ms-parameter-location": "method"
+   },
+   "isRequired": false,
+   "isConstant": false,
+   "name": {
+    "$id": "127",
+    "fixed": false,
+    "raw": "Id1"
+   },
+   "serializedName": "id",
+   "modelType": {
+    "$id": "128",
+    "$type": "PrimaryType",
+    "knownPrimaryType": "string",
+    "name": {
+     "$id": "129",
+     "fixed": false,
+     "raw": "String"
+    },
+    "deprecated": false
+   }
+  }
+ ],
+ "operations": [
+  {
+   "$id": "130",
+   "methods": [
+    {
+     "$id": "131",
+     "name": {
+      "$id": "132",
+      "fixed": false,
+      "raw": "GetCustomers"
+     },
+     "group": {
+      "$id": "133",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "GetCustomers",
+     "url": "/customers",
+     "isAbsoluteUrl": false,
+     "httpMethod": "get",
+     "responses": {
+      "OK": {
+       "$id": "134",
+       "body": {
+        "$id": "135",
+        "$type": "SequenceType",
+        "elementType": {
+         "$ref": "2"
+        },
+        "name": {
+         "$id": "136",
+         "fixed": false
+        },
+        "deprecated": false
+       },
+       "extensions": {
+        "$id": "137",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·gn5oo9·customers·get·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·gn5oo9·customers·get·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "138",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "139",
+      "body": {
+       "$ref": "135"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "text/plain",
+      "application/json",
+      "text/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "140",
+     "parameters": [
+      {
+       "$id": "141",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "142",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "143",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·1ir0ap2·customers·post·requestbody",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/requestBodies/paths·1ir0ap2·customers·post·requestbody"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "144",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "2"
+       }
+      }
+     ],
+     "name": {
+      "$id": "145",
+      "fixed": false,
+      "raw": "AddCustomer"
+     },
+     "group": {
+      "$id": "146",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "AddCustomer",
+     "url": "/customers",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "147",
+       "body": {
+        "$ref": "2"
+       },
+       "extensions": {
+        "$id": "148",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·pfffru·customers·post·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·pfffru·customers·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "149",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "150",
+      "body": {
+       "$ref": "2"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "text/plain",
+      "application/json",
+      "text/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "151",
+     "parameters": [
+      {
+       "$id": "152",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "153",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "154",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·1ruoumf·customers·put·requestbody",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/requestBodies/paths·1ruoumf·customers·put·requestbody"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "155",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "2"
+       }
+      }
+     ],
+     "name": {
+      "$id": "156",
+      "fixed": false,
+      "raw": "UpdateCustomer"
+     },
+     "group": {
+      "$id": "157",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "UpdateCustomer",
+     "url": "/customers",
+     "isAbsoluteUrl": false,
+     "httpMethod": "put",
+     "responses": {
+      "OK": {
+       "$id": "158",
+       "body": {
+        "$ref": "2"
+       },
+       "extensions": {
+        "$id": "159",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·3j1uum·customers·put·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·3j1uum·customers·put·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "160",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "161",
+      "body": {
+       "$ref": "2"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "text/plain",
+      "application/json",
+      "text/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "162",
+     "parameters": [
+      {
+       "$id": "163",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "164",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "165",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·997nhe·customers·delete·requestbody",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/requestBodies/paths·997nhe·customers·delete·requestbody"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "166",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "2"
+       }
+      }
+     ],
+     "name": {
+      "$id": "167",
+      "fixed": false,
+      "raw": "DeleteCustomer"
+     },
+     "group": {
+      "$id": "168",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "DeleteCustomer",
+     "url": "/customers",
+     "isAbsoluteUrl": false,
+     "httpMethod": "delete",
+     "responses": {
+      "OK": {
+       "$id": "169",
+       "extensions": {
+        "$id": "170",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·q87ayq·customers·delete·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·q87ayq·customers·delete·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "171",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "172",
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "173",
+     "name": {
+      "$id": "174",
+      "fixed": false,
+      "raw": "GetEmailBlasts"
+     },
+     "group": {
+      "$id": "175",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "GetEmailBlasts",
+     "url": "/emailblasts",
+     "isAbsoluteUrl": false,
+     "httpMethod": "get",
+     "responses": {
+      "OK": {
+       "$id": "176",
+       "body": {
+        "$id": "177",
+        "$type": "SequenceType",
+        "elementType": {
+         "$ref": "28"
+        },
+        "name": {
+         "$id": "178",
+         "fixed": false
+        },
+        "deprecated": false
+       },
+       "extensions": {
+        "$id": "179",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·1xq5ixo·emailblasts·get·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·1xq5ixo·emailblasts·get·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "180",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "181",
+      "body": {
+       "$ref": "177"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "text/plain",
+      "application/json",
+      "text/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "182",
+     "parameters": [
+      {
+       "$id": "183",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "184",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "185",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·vohwct·emailblasts·post·requestbody",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/requestBodies/paths·vohwct·emailblasts·post·requestbody"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "186",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "28"
+       }
+      }
+     ],
+     "name": {
+      "$id": "187",
+      "fixed": false,
+      "raw": "AddEmailBlast"
+     },
+     "group": {
+      "$id": "188",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "AddEmailBlast",
+     "url": "/emailblasts",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "189",
+       "body": {
+        "$ref": "28"
+       },
+       "extensions": {
+        "$id": "190",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·n3zopz·emailblasts·post·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·n3zopz·emailblasts·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "191",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "192",
+      "body": {
+       "$ref": "28"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "text/plain",
+      "application/json",
+      "text/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "193",
+     "parameters": [
+      {
+       "$id": "194",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "195",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "196",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·tf2yud·emailblasts·put·requestbody",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/requestBodies/paths·tf2yud·emailblasts·put·requestbody"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "197",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "28"
+       }
+      }
+     ],
+     "name": {
+      "$id": "198",
+      "fixed": false,
+      "raw": "UpdateEmailBlast"
+     },
+     "group": {
+      "$id": "199",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "UpdateEmailBlast",
+     "url": "/emailblasts",
+     "isAbsoluteUrl": false,
+     "httpMethod": "put",
+     "responses": {
+      "OK": {
+       "$id": "200",
+       "body": {
+        "$ref": "28"
+       },
+       "extensions": {
+        "$id": "201",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·1sre49d·emailblasts·put·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·1sre49d·emailblasts·put·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "202",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "203",
+      "body": {
+       "$ref": "28"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "text/plain",
+      "application/json",
+      "text/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "204",
+     "parameters": [
+      {
+       "$id": "205",
+       "clientProperty": {
+        "$ref": "118"
+       },
+       "location": "path",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "206",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "207",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·zsvso·emailblasts-id·delete·parameters·0",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/parameters/paths·zsvso·emailblasts-id·delete·parameters·0"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": true,
+       "isConstant": false,
+       "name": {
+        "$id": "208",
+        "fixed": false,
+        "raw": "id"
+       },
+       "serializedName": "id",
+       "modelType": {
+        "$id": "209",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "210",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "211",
+      "fixed": false,
+      "raw": "DeleteEmailBlast"
+     },
+     "group": {
+      "$id": "212",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "DeleteEmailBlast",
+     "url": "/emailblasts/{id}",
+     "isAbsoluteUrl": false,
+     "httpMethod": "delete",
+     "responses": {
+      "OK": {
+       "$id": "213",
+       "extensions": {
+        "$id": "214",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·x02bmu·emailblasts-id·delete·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·x02bmu·emailblasts-id·delete·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "215",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "216",
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "217",
+     "name": {
+      "$id": "218",
+      "fixed": false,
+      "raw": "GetEmailRecipients"
+     },
+     "group": {
+      "$id": "219",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "GetEmailRecipients",
+     "url": "/emailrecipients",
+     "isAbsoluteUrl": false,
+     "httpMethod": "get",
+     "responses": {
+      "OK": {
+       "$id": "220",
+       "body": {
+        "$id": "221",
+        "$type": "SequenceType",
+        "elementType": {
+         "$ref": "72"
+        },
+        "name": {
+         "$id": "222",
+         "fixed": false
+        },
+        "deprecated": false
+       },
+       "extensions": {
+        "$id": "223",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·g3vzwa·emailrecipients·get·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·g3vzwa·emailrecipients·get·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "224",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "225",
+      "body": {
+       "$ref": "221"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "text/plain",
+      "application/json",
+      "text/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "226",
+     "parameters": [
+      {
+       "$id": "227",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "228",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "229",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·1cirxoe·emailrecipients·post·requestbody",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/requestBodies/paths·1cirxoe·emailrecipients·post·requestbody"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "230",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "72"
+       }
+      }
+     ],
+     "name": {
+      "$id": "231",
+      "fixed": false,
+      "raw": "AddEmailRecipient"
+     },
+     "group": {
+      "$id": "232",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "AddEmailRecipient",
+     "url": "/emailrecipients",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "233",
+       "body": {
+        "$ref": "72"
+       },
+       "extensions": {
+        "$id": "234",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·19sn7bm·emailrecipients·post·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·19sn7bm·emailrecipients·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "235",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "236",
+      "body": {
+       "$ref": "72"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "text/plain",
+      "application/json",
+      "text/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "237",
+     "parameters": [
+      {
+       "$id": "238",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "239",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "240",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·1i1w0lq·emailrecipients·put·requestbody",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/requestBodies/paths·1i1w0lq·emailrecipients·put·requestbody"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "241",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "72"
+       }
+      }
+     ],
+     "name": {
+      "$id": "242",
+      "fixed": false,
+      "raw": "UpdateEmailRecipient"
+     },
+     "group": {
+      "$id": "243",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "UpdateEmailRecipient",
+     "url": "/emailrecipients",
+     "isAbsoluteUrl": false,
+     "httpMethod": "put",
+     "responses": {
+      "OK": {
+       "$id": "244",
+       "body": {
+        "$ref": "72"
+       },
+       "extensions": {
+        "$id": "245",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·1fx5wis·emailrecipients·put·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·1fx5wis·emailrecipients·put·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "246",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "247",
+      "body": {
+       "$ref": "72"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "text/plain",
+      "application/json",
+      "text/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "248",
+     "parameters": [
+      {
+       "$id": "249",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "250",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "251",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·nk3meb·emailrecipients·delete·requestbody",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/requestBodies/paths·nk3meb·emailrecipients·delete·requestbody"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "252",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "72"
+       }
+      }
+     ],
+     "name": {
+      "$id": "253",
+      "fixed": false,
+      "raw": "DeleteEmailRecipient"
+     },
+     "group": {
+      "$id": "254",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "DeleteEmailRecipient",
+     "url": "/emailrecipients",
+     "isAbsoluteUrl": false,
+     "httpMethod": "delete",
+     "responses": {
+      "OK": {
+       "$id": "255",
+       "extensions": {
+        "$id": "256",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·1qg2dvk·emailrecipients·delete·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·1qg2dvk·emailrecipients·delete·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "257",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "258",
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "259",
+     "name": {
+      "$id": "260",
+      "fixed": false,
+      "raw": "GetTemplates"
+     },
+     "group": {
+      "$id": "261",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "GetTemplates",
+     "url": "/templates",
+     "isAbsoluteUrl": false,
+     "httpMethod": "get",
+     "responses": {
+      "OK": {
+       "$id": "262",
+       "body": {
+        "$id": "263",
+        "$type": "SequenceType",
+        "elementType": {
+         "$ref": "98"
+        },
+        "name": {
+         "$id": "264",
+         "fixed": false
+        },
+        "deprecated": false
+       },
+       "extensions": {
+        "$id": "265",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·15nobi5·templates·get·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·15nobi5·templates·get·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "266",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "267",
+      "body": {
+       "$ref": "263"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "text/plain",
+      "application/json",
+      "text/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "268",
+     "parameters": [
+      {
+       "$id": "269",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "270",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "271",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·1cdxgon·templates·post·requestbody",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/requestBodies/paths·1cdxgon·templates·post·requestbody"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "272",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "98"
+       }
+      }
+     ],
+     "name": {
+      "$id": "273",
+      "fixed": false,
+      "raw": "AddTemplate"
+     },
+     "group": {
+      "$id": "274",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "AddTemplate",
+     "url": "/templates",
+     "isAbsoluteUrl": false,
+     "httpMethod": "post",
+     "responses": {
+      "OK": {
+       "$id": "275",
+       "body": {
+        "$ref": "98"
+       },
+       "extensions": {
+        "$id": "276",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·1ipmj5z·templates·post·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·1ipmj5z·templates·post·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "277",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "278",
+      "body": {
+       "$ref": "98"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "text/plain",
+      "application/json",
+      "text/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "279",
+     "parameters": [
+      {
+       "$id": "280",
+       "location": "body",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "281",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "282",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·1119u72·templates·put·requestbody",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/requestBodies/paths·1119u72·templates·put·requestbody"
+         ]
+        }
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "283",
+        "fixed": false,
+        "raw": "body"
+       },
+       "serializedName": "body",
+       "modelType": {
+        "$ref": "98"
+       }
+      }
+     ],
+     "name": {
+      "$id": "284",
+      "fixed": false,
+      "raw": "UpdateTemplate"
+     },
+     "group": {
+      "$id": "285",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "UpdateTemplate",
+     "url": "/templates",
+     "isAbsoluteUrl": false,
+     "httpMethod": "put",
+     "responses": {
+      "OK": {
+       "$id": "286",
+       "body": {
+        "$ref": "98"
+       },
+       "extensions": {
+        "$id": "287",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·1l6b0he·templates·put·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·1l6b0he·templates·put·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "288",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "289",
+      "body": {
+       "$ref": "98"
+      },
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "text/plain",
+      "application/json",
+      "text/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    },
+    {
+     "$id": "290",
+     "parameters": [
+      {
+       "$id": "291",
+       "clientProperty": {
+        "$ref": "118"
+       },
+       "location": "query",
+       "collectionFormat": "none",
+       "defaultValue": {
+        "$id": "292",
+        "fixed": false
+       },
+       "deprecated": false,
+       "documentation": {
+        "$id": "293",
+        "fixed": false
+       },
+       "extensions": {
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·15mg3ue·templates·delete·parameters·0",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/parameters/paths·15mg3ue·templates·delete·parameters·0"
+         ]
+        },
+        "x-ms-parameter-location": "method"
+       },
+       "isRequired": false,
+       "isConstant": false,
+       "name": {
+        "$id": "294",
+        "fixed": false,
+        "raw": "id"
+       },
+       "serializedName": "id",
+       "modelType": {
+        "$id": "295",
+        "$type": "PrimaryType",
+        "knownPrimaryType": "string",
+        "name": {
+         "$id": "296",
+         "fixed": false,
+         "raw": "String"
+        },
+        "deprecated": false
+       }
+      }
+     ],
+     "name": {
+      "$id": "297",
+      "fixed": false,
+      "raw": "DeleteTemplate"
+     },
+     "group": {
+      "$id": "298",
+      "fixed": false,
+      "raw": ""
+     },
+     "serializedName": "DeleteTemplate",
+     "url": "/templates",
+     "isAbsoluteUrl": false,
+     "httpMethod": "delete",
+     "responses": {
+      "OK": {
+       "$id": "299",
+       "extensions": {
+        "$id": "300",
+        "x-ms-metadata": {
+         "apiVersions": [
+          "1.0"
+         ],
+         "filename": [
+          "mem:///117?oai3.shaken.json"
+         ],
+         "name": "paths·6ea19z·templates·delete·responses·200",
+         "originalLocations": [
+          "http://localhost:5000/swagger/v1/swagger.json#/components/responses/paths·6ea19z·templates·delete·responses·200"
+         ]
+        }
+       },
+       "isNullable": true
+      }
+     },
+     "defaultResponse": {
+      "$id": "301",
+      "isNullable": true
+     },
+     "returnType": {
+      "$id": "302",
+      "isNullable": true
+     },
+     "requestContentType": "application/json; charset=utf-8",
+     "responseContentTypes": [
+      "application/json"
+     ],
+     "extensions": {
+      "servers": []
+     },
+     "deprecated": false,
+     "hidden": false
+    }
+   ],
+   "name": {
+    "$id": "303",
+    "fixed": false,
+    "raw": ""
+   },
+   "typeName": {
+    "$id": "304",
+    "fixed": false
+   },
+   "nameForProperty": "Emailer"
+  }
+ ]
+}

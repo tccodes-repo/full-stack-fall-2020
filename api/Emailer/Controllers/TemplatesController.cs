@@ -17,26 +17,27 @@ namespace Emailer.Controllers
         }
         
         // GET
+        [HttpGet(Name = "GetTemplates")]
         public async Task<List<Template>> Get()
         {
             return await _templateRepository.GetAllAsync();
         }
 
-        [HttpPost]
+        [HttpPost(Name = "AddTemplate")]
         public async Task<Template> Add([FromBody] Template template)
         {
             await _templateRepository.AddAsync(template);
             return template;
         }
 
-        [HttpPut]
+        [HttpPut(Name = "UpdateTemplate")]
         public async Task<Template> Update([FromBody] Template template)
         {
             await _templateRepository.UpdateAsync(template);
             return template;
         }
 
-        [HttpDelete]
+        [HttpDelete(Name = "DeleteTemplate")]
         public async Task Delete([FromQuery] string id)
         {
             var blast = await _templateRepository.GetByIdAsync(id);

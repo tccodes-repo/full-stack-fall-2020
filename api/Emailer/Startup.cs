@@ -1,20 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mail;
-using System.Threading.Tasks;
 using Emailer.MongoDb;
+using Emailer.SMTP;
 using Emailer.Templates;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using MongoDB.Driver;
 
 namespace Emailer
 {
@@ -31,10 +23,27 @@ namespace Emailer
         public void ConfigureServices(IServiceCollection services)
         {
             services
+                .AddRouting(options => { options.LowercaseUrls = true; })
                 .AddMongoDb(Configuration)
+                .AddSmtp()
                 .AddTemplates()
                 .AddScoped<EmailDeliveryTask>()
-                .AddTransient(_ => new SmtpClient("localhost", 1025))
+                .AddSwaggerGen()
+                .AddCors(options =>
+                {
+                    options.AddDefaultPolicy(policyBuilder =>
+                    {
+                        policyBuilder.AllowAnyOrigin();
+                        policyBuilder.AllowAnyHeader();
+                        policyBuilder.AllowAnyMethod();
+                    });
+                })
+                .AddApiVersioning(options =>
+                {
+                    options.ReportApiVersions = true;
+                    options.DefaultApiVersion = new ApiVersion(1, 0);
+                    options.AssumeDefaultVersionWhenUnspecified = true;
+                })
                 .AddControllers();
         }
 
@@ -46,7 +55,12 @@ namespace Emailer
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            app.UseSwagger();
+            app.UseCors();
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Emailer API");
+            });
 
             app.UseRouting();
 
