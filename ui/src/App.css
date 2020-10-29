@@ -1,6 +1,32 @@
 .App {
   text-align: center;
+  display: flex;
+  height: 100vh;
 }
+
+.App .sidebar {
+  height: 100%;
+  flex: 0 0 150px;
+  border-right: solid 1px black;
+}
+
+.App .sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.App .sidebar ul li {
+  margin: 12px 6px;
+  text-align: left;
+}
+
+.App .content {
+  height: 100%;
+  flex: 1;
+}
+
+
 
 .App-logo {
   height: 40vmin;

@@ -1,40 +1,49 @@
-import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Customers from './containers/Customers';
+import EmailBlasts from './containers/EmailBlasts';
+import Recipients from './containers/Recipients';
+import Templates from './containers/Templates';
 
-import { Emailer } from './lib/api/dist/emailer';
-
-
-
-
-function App() {
-
-  const [customers, setCustomers] = useState([]);
-
-  var e = new Emailer({
-    baseUri: 'http://localhost:5000'
-  });
-
-  useEffect(() => {
-    e.getCustomers().then(r => setCustomers(r));
-  }, [setCustomers]);
-  
-
+function App() { 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
-        {customers.map(c => (
-          <div>{c.firstName} {c.lastName}</div>
-        ))}
-      </header>
+      <Router>
+      <div className="sidebar">
+          <ul>
+            <li><Link to="/customers">Customers</Link></li>
+            <li><Link to="/recipients">Recipients</Link></li>
+            <li><Link to="/templates">Templates</Link></li>
+            <li><Link to="/emailblasts">Email Blasts</Link></li>
+          </ul>
+      </div>
+      <div className="content">
+          <Switch>
+            <Route path="/customers">
+              <Customers />
+            </Route>
+            <Route path="/recipients">
+              <Recipients />
+            </Route>
+            <Route path="/templates">
+              <Templates />
+            </Route>
+            <Route path="/emailblasts">
+              <EmailBlasts />
+            </Route>
+            <Route path="/">
+              <div>Home Page, Hello</div>
+            </Route>
+          </Switch>
+      </div>
+      </Router>
+      
     </div>
   );
 }
