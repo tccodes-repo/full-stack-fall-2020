@@ -1,11 +1,9 @@
 import React from 'react';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+
+import { Switch, Route } from 'react-router';
+import { Link } from 'react-router-dom';
+
 import Customers from './containers/Customers';
 import EmailBlasts from './containers/EmailBlasts';
 import Recipients from './containers/Recipients';
@@ -14,7 +12,6 @@ import Templates from './containers/Templates';
 function App() { 
   return (
     <div className="App">
-      <Router>
       <div className="sidebar">
           <ul>
             <li><Link to="/customers">Customers</Link></li>
@@ -42,8 +39,6 @@ function App() {
             </Route>
           </Switch>
       </div>
-      </Router>
-      
     </div>
   );
 }
