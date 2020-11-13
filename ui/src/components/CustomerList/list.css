@@ -1,0 +1,9 @@
+table.customer-list {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.customer-list th, table.customer-list td {
+    border: solid 1px black;
+    padding: 6px;
+}

@@ -1,0 +1,25 @@
+.customers {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.customers .error {
+    display: flex;
+    color: 'red';
+    flex-direction: column; 
+    align-items: 'center';
+ }
+
+ .customers .error .stack {
+    border: solid 1px red; 
+    height: 250px; 
+    font-size: 0.6em;
+    width: 500px;
+    overflow-y: auto,;
+    margin: auto;
+ }
+
+ .customers .list {
+     margin-top: 24px;
+ }
