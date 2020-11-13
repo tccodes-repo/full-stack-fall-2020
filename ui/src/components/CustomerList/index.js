@@ -3,7 +3,7 @@ import './list.css';
 
 export default function CustomerList({ customers }) {
 
-    if (customers == null){
+    if (customers == null || customers.length == 0){
         return (
             <div>No Customers</div>
         );

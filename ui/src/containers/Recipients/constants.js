@@ -1,0 +1,5 @@
+export const SHOW_ADD_RECIPIENT = "recipients/SHOW_ADD_RECIPIENT";
+
+export const ADD_RECIPIENT_STARTED = "recipients/ADD_RECIPIENT_STARTED";
+export const ADD_RECIPIENT_SUCCESS = "recipients/ADD_RECIPIENT_SUCCESS";
+export const ADD_RECIPIENT_ERROR = "recipients/ADD_RECIPIENT_ERROR";
