@@ -19,7 +19,12 @@ services:
     ports:
       - "1025:1025"
       - "8025:8025"
-        
+      
+  api:
+    build:
+      context: ./api
+    ports:
+      - "8088:80"
         
 volumes:
   mongodb:
