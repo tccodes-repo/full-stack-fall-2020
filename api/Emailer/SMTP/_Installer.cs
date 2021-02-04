@@ -6,7 +6,7 @@ namespace Emailer.SMTP
     {
         public static IServiceCollection AddSmtp(this IServiceCollection services) => services
             .AddTransient<ISmtpClient>(svc =>
-                new SmtpClient(new System.Net.Mail.SmtpClient("localhost", 1025)));
+                new SmtpClient(new System.Net.Mail.SmtpClient("127.0.0.1", 1025)));
 
     }
 }
