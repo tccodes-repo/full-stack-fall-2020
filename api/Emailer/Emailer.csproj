@@ -10,6 +10,7 @@
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.9" />
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="4.1.1" />
       <PackageReference Include="MongoDB.Driver" Version="2.11.2" />
+      <PackageReference Include="Quartz" Version="3.2.4" />
       <PackageReference Include="RazorLight" Version="2.0.0-beta9" />
       <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     </ItemGroup>
