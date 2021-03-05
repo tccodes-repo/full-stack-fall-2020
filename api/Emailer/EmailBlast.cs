@@ -13,6 +13,8 @@ namespace Emailer
         public string Status { get; set; } = "Pending";
 
         public int EmailsDelivered { get; set; } = 0;
+
+        public string Schedule { get; set; } = "* * * ? * * 2100";
         
         public DateTime CreatedOn { get; set; } = DateTime.Now;
         

@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Quartz;
+using Quartz.Impl;
 
 namespace Emailer
 {
@@ -27,7 +29,10 @@ namespace Emailer
                 .AddMongoDb(Configuration)
                 .AddSmtp()
                 .AddTemplates()
-                .AddScoped<EmailDeliveryTask>()
+                .AddScoped<EmailProcessingService>()
+                .AddTransient<EmailDeliveryJob>()
+                .AddScoped<IEmailBlastDeliverer, EmailBlastDeliverer>()
+                .AddSingleton<ISchedulerFactory, EmailerSchedulerFactory>()
                 .AddSwaggerGen()
                 .AddCors(options =>
                 {
