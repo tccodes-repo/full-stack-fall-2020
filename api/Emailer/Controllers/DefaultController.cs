@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Emailer.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     [ApiVersion("1.0")]
     [ApiController]
     [Route("[controller]")]
