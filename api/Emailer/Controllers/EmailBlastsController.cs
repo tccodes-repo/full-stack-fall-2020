@@ -11,10 +11,12 @@ namespace Emailer.Controllers
     {
 
         private IEmailBlastRepository _emailBlastRepository;
+        private IEmailBlastUpdateQueue _emailBlastUpdateQueue;
 
-        public EmailBlastsController(IEmailBlastRepository emailBlastRepository)
+        public EmailBlastsController(IEmailBlastRepository emailBlastRepository, IEmailBlastUpdateQueue emailBlastUpdateQueue)
         {
             _emailBlastRepository = emailBlastRepository;
+            _emailBlastUpdateQueue = emailBlastUpdateQueue;
         }
         
         // GET
@@ -35,6 +37,9 @@ namespace Emailer.Controllers
         public async Task<EmailBlast> Update([FromBody] EmailBlast blast)
         {
             await _emailBlastRepository.UpdateAsync(blast);
+            if (blast.Id != null) {
+                await _emailBlastUpdateQueue.EnqueueUpdateAsync(new EmailBlastUpdate { EmailBlastId = blast.Id });
+            }
             return blast;
         }
 
