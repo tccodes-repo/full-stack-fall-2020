@@ -32,6 +32,7 @@ namespace Emailer
                 .AddScoped<EmailProcessingService>()
                 .AddTransient<EmailDeliveryJob>()
                 .AddScoped<IEmailBlastDeliverer, EmailBlastDeliverer>()
+                .AddScoped<IEmailBlastUpdateQueue, MongoDbEmailBlastUpdateQueue>()
                 .AddSingleton<ISchedulerFactory, EmailerSchedulerFactory>()
                 .AddSwaggerGen()
                 .AddCors(options =>
