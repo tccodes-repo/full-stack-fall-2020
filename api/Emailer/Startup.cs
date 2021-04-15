@@ -7,8 +7,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.Protocols;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using System.Net.Http;
+using System.Linq;
 using Quartz;
 using Quartz.Impl;
+using Emailer.Auth;
 
 namespace Emailer
 {
@@ -34,6 +41,7 @@ namespace Emailer
                 .AddScoped<IEmailBlastDeliverer, EmailBlastDeliverer>()
                 .AddScoped<IEmailBlastUpdateQueue, MongoDbEmailBlastUpdateQueue>()
                 .AddSingleton<ISchedulerFactory, EmailerSchedulerFactory>()
+                
                 .AddSwaggerGen()
                 .AddCors(options =>
                 {
@@ -51,6 +59,44 @@ namespace Emailer
                     options.AssumeDefaultVersionWhenUnspecified = true;
                 })
                 .AddControllers();
+
+                services.AddAuthentication(options => {
+                    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer(o => {
+                    o.MetadataAddress = "https://www.googleapis.com/oauth2/v3/certs";
+                    o.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters {
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+                    };
+                    o.IncludeErrorDetails = true;
+
+                    o.Events = new JwtBearerEvents {
+                        OnAuthenticationFailed = (ctx) => {
+                            return System.Threading.Tasks.Task.CompletedTask;
+                        },
+                        OnTokenValidated = (ctx) => {   
+
+                            ctx.HttpContext.User = ctx.Principal;
+                            return System.Threading.Tasks.Task.CompletedTask;
+                        }
+                    };         
+
+                    o.ConfigurationManager = new ConfigurationManager<OpenIdConnectConfiguration>(
+                        o.MetadataAddress,
+                        new JwksConfigurationRetriever(),
+                        new HttpDocumentRetriever(new HttpClient(new HttpClientHandler())
+                        {
+                            Timeout = o.BackchannelTimeout,
+                            MaxResponseContentBufferSize = 10485760L
+                        })
+                        {
+                            RequireHttps = false
+                        });
+                });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,14 +109,16 @@ namespace Emailer
 
             app.UseSwagger();
             app.UseCors();
+            app.UseStaticFiles();
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "Emailer API");
             });
-
+            
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
+            
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }

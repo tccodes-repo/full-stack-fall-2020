@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customers</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                var token = localStorage.getItem('token');
+                var name = localStorage.getItem('name');
+                var img = localStorage.getItem('image');
+
+                $('#welcome').html('<div>Welcome <img src=' + img + ' /> ' + name + '! to the TC Codes Emailer Application');
+
+                $.ajax({
+                    method: "GET",
+                    url: "/customers",
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    }
+                })
+                .then(function(data) {
+
+                    for(var i = 0; i < data.length; i++) {
+                        var c = data[i];
+                        $('#customer-list').append('<div>' + c.firstName + '</div>');
+                    }
+                    
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="welcome"></div>
+        
+
+        <div>Customers</div>
+        <div id="customer-list">
+
+        </div>
+    </body>
+</html>
